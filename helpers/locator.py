@@ -2,6 +2,8 @@
 
 from maya import cmds
 
+from trigger.library.naming import unique_name
+
 def locate(objects=None, constraint=False):
     """Create locators matching the pivot point of selected object"""
     objects = objects or cmds.ls(sl=True, type="transform")
@@ -9,7 +11,7 @@ def locate(objects=None, constraint=False):
         objects = [objects]
     locator_list = []
     for obj in objects:
-        _locator = cmds.spaceLocator(name="locate")[0] # I don't worry about the name
+        _locator = cmds.spaceLocator(name=unique_name("locate"))[0]
         if constraint:
             cmds.parentConstraint(obj, _locator, maintainOffset=False)
         else:
