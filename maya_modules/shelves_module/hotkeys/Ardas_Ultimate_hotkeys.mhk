@@ -1,0 +1,152 @@
+//Maya Preference 2020 (Release 1)
+//
+//
+
+//
+// The runtime commands referenced by the hotkeys
+//
+runTimeCommand
+	-annotation "Toggles on/off the visibility of NURBS surfaces in the active view"
+	-category "Custom Scripts"
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("actView = cmds.getPanel(wf=True)\nstate = int(cmds.modelEditor(actView, q=1, nurbsSurfaces=True))\ncmds.modelEditor(actView, e=1, nurbsSurfaces=1 - state)")
+	toggle_nurbs_surfaces;
+
+runTimeCommand
+	-annotation "Toggles pinocchio preferences geometry options on/off"
+	-category "Custom Scripts"
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("p_list = cmds.ls(\"*:preferences\") + cmds.ls(\"preferences\")\nfor p in p_list:\n    state = bool(cmds.getAttr(\"%s.geometries\" % p))\n    cmds.setAttr(\"%s.geometries\" % p, int(not state))\n    _display = 0 if state == 0 else 2\n    cmds.setAttr(\"%s.geometryDisplay\" % p, _display)")
+	pinocchio_geometry_toggle;
+
+runTimeCommand
+	-annotation "toggles pinocchio joint preferences on/off"
+	-category "Custom Scripts"
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("p_list = cmds.ls(\"*:preferences\") + cmds.ls(\"preferences\")\nfor p in p_list:\n    state = bool(cmds.getAttr(\"%s.joints\" % p))\n    cmds.setAttr(\"%s.joints\" % p, int(not state))\n    _display = 0 if state == 0 else 2\n    cmds.setAttr(\"%s.jointDisplay\" % p, _display)")
+	pinocchio_joints_toggle;
+
+//
+// The name commands referenced by the hotkeys
+//
+nameCommand
+	-annotation "NodeEditorWindowNameCommand"
+	-sourceType "mel"
+	-command ("NodeEditorWindow")
+	NodeEditorWindowNameCommand;
+
+nameCommand
+	-annotation "ConnectionEditorNameCommand"
+	-sourceType "mel"
+	-command ("ConnectionEditor")
+	ConnectionEditorNameCommand;
+
+nameCommand
+	-annotation "OpenAELiveLinkNameCommand"
+	-sourceType "mel"
+	-command ("OpenAELiveLink")
+	OpenAELiveLinkNameCommand;
+
+nameCommand
+	-annotation "SplitEdgeRingToolNameCommand"
+	-sourceType "mel"
+	-command ("SplitEdgeRingTool")
+	SplitEdgeRingToolNameCommand;
+
+nameCommand
+	-annotation "ToggleFaceNormalDisplayNameCommand"
+	-sourceType "mel"
+	-command ("ToggleFaceNormalDisplay")
+	ToggleFaceNormalDisplayNameCommand;
+
+nameCommand
+	-annotation "GraphEditorNameCommand"
+	-sourceType "mel"
+	-command ("GraphEditor")
+	GraphEditorNameCommand;
+
+nameCommand
+	-annotation "HypershadeWindowNameCommand"
+	-sourceType "mel"
+	-command ("HypershadeWindow")
+	HypershadeWindowNameCommand;
+
+nameCommand
+	-annotation "dR_viewJointsTGLNameCommand"
+	-sourceType "mel"
+	-command ("dR_viewJointsTGL")
+	dR_viewJointsTGLNameCommand;
+
+nameCommand
+	-annotation "ToggleUseDefaultMaterialNameCommand"
+	-sourceType "mel"
+	-command ("ToggleUseDefaultMaterial")
+	ToggleUseDefaultMaterialNameCommand;
+
+nameCommand
+	-annotation "toggle_nurbs_surfacesNameCommand"
+	-sourceType "mel"
+	-command ("toggle_nurbs_surfaces")
+	toggle_nurbs_surfacesNameCommand;
+
+nameCommand
+	-annotation "pinocchio_geometry_toggleNameCommand"
+	-sourceType "mel"
+	-command ("pinocchio_geometry_toggle")
+	pinocchio_geometry_toggleNameCommand;
+
+nameCommand
+	-annotation "pinocchio_joints_toggleNameCommand"
+	-sourceType "mel"
+	-command ("pinocchio_joints_toggle")
+	pinocchio_joints_toggleNameCommand;
+
+//
+// The user hotkeys
+//
+//
+// The hotkey set
+//
+hotkeySet -source "Maya_Default" -current Ardas_Ultimate_hotkeys;
+//
+// The hotkey contexts and hotkeys
+//
+hotkey -keyShortcut "n" -sht -name ("ToggleFaceNormalDisplayNameCommand");
+hotkey -keyShortcut "#" -alt -name ("pinocchio_joints_toggleNameCommand");
+hotkey -keyShortcut "@" -alt -name ("pinocchio_geometry_toggleNameCommand");
+hotkey -keyShortcut "m" -alt -name ("HypershadeWindowNameCommand");
+hotkey -keyShortcut "g" -alt -name ("GraphEditorNameCommand");
+hotkey -keyShortcut "3" -alt -name ("dR_viewJointsTGLNameCommand");
+hotkey -keyShortcut "`" -releaseName ("");
+hotkey -keyShortcut "`" -name ("ToggleUseDefaultMaterialNameCommand");
+hotkey -keyShortcut "e" -alt -name ("PolyExtrudeNameCommand");
+hotkey -keyShortcut "e" -ctl -name ("");
+hotkey -keyShortcut "%" -ctl -name ("");
+hotkey -keyShortcut "n" -ctl -sht -name ("ChangeNormalSizeNameCommand");
+hotkey -keyShortcut "4" -alt -name ("toggle_nurbs_surfacesNameCommand");
+hotkey -keyShortcut "F3" -name ("NodeEditorWindowNameCommand");
+hotkey -keyShortcut "t" -name ("OpenAELiveLinkNameCommand");
+hotkey -keyShortcut "q" -alt -name ("SplitEdgeRingToolNameCommand");
+hotkey -keyShortcut "F2" -name ("ConnectionEditorNameCommand");
+hotkey -keyShortcut "b" -ctl -sht -name ("");
+hotkey -keyShortcut "q" -alt -releaseName ("");
+hotkeyCtx -type "Editor" -addClient "shapePanel";
+hotkeyCtx -type "Editor" -addClient "hyperGraphPanel";
+hotkeyCtx -type "Editor" -addClient "posePanel";
+hotkeyCtx -type "Editor" -addClient "graphEditor";
+hotkeyCtx -type "Editor" -addClient "polyTexturePlacementPanel";
+hotkeyCtx -type "Editor" -addClient "timeEditorPanel";
+hotkeyCtx -type "Editor" -addClient "outlinerPanel";
+hotkeyCtx -type "Editor" -addClient "profilerPanel";
+hotkeyCtx -type "Editor" -addClient "hyperShadePanel";
+hotkeyCtx -type "Editor" -addClient "nodeEditorPanel";
+hotkeyCtx -type "Tool" -addClient "texCutContext";
+hotkeyCtx -type "Tool" -addClient "sculptMeshCache";
+hotkeyCtx -type "Tool" -addClient "SymmetrizeUVBrush";
+hotkeyCtx -type "Tool" -addClient "polyCutUV";
+hotkeyCtx -type "Tool" -addClient "Unfold3DBrush";
+hotkeyCtx -type "Tool" -addClient "texSculptCacheContext";
+hotkeyCtx -type "Tool" -addClient "xgmIGBrush";
