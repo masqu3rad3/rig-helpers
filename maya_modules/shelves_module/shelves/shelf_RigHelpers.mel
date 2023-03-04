@@ -30,7 +30,7 @@ global proc shelf_RigHelpers () {
         -image "seperator_shortcuts.png"
         -image1 "seperator_shortcuts.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "print(\"User defined macro\");"
         -sourceType "mel"
@@ -64,7 +64,7 @@ global proc shelf_RigHelpers () {
         -image "menuIconModify.png"
         -image1 "menuIconModify.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "FreezeTransformations"
         -sourceType "mel"
@@ -98,7 +98,7 @@ global proc shelf_RigHelpers () {
         -image "menuIconModify.png"
         -image1 "menuIconModify.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "MatchTransform"
         -sourceType "mel"
@@ -132,7 +132,7 @@ global proc shelf_RigHelpers () {
         -image "menuIconModify.png"
         -image1 "menuIconModify.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "CenterPivot"
         -sourceType "mel"
@@ -166,7 +166,7 @@ global proc shelf_RigHelpers () {
         -image "menuIconEdit.png"
         -image1 "menuIconEdit.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "DeleteHistory"
         -sourceType "mel"
@@ -200,7 +200,7 @@ global proc shelf_RigHelpers () {
         -image "menuIconDisplay.png"
         -image1 "menuIconDisplay.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "ToggleLocalRotationAxes"
         -sourceType "mel"
@@ -234,7 +234,7 @@ global proc shelf_RigHelpers () {
         -image "menuIconWindow.png"
         -image1 "menuIconWindow.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "ComponentEditor"
         -sourceType "mel"
@@ -267,7 +267,7 @@ global proc shelf_RigHelpers () {
         -image "setDrivenKeyframe.png"
         -image1 "setDrivenKeyframe.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "SetDrivenKeyOptions"
         -sourceType "mel"
@@ -300,7 +300,7 @@ global proc shelf_RigHelpers () {
         -image "goToBindPose.png"
         -image1 "goToBindPose.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "GoToBindPose"
         -sourceType "mel"
@@ -333,7 +333,7 @@ global proc shelf_RigHelpers () {
         -image "blendShapeEditor.png"
         -image1 "blendShapeEditor.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "ShapeEditor"
         -sourceType "mel"
@@ -366,7 +366,7 @@ global proc shelf_RigHelpers () {
         -image "seperator_rigging.png"
         -image1 "seperator_rigging.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -sourceType "mel"
         -commandRepeatable 1
@@ -398,7 +398,7 @@ global proc shelf_RigHelpers () {
         -image "trigger.png"
         -image1 "trigger.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "from trigger.ui import main\nmain.launch()"
         -sourceType "python"
@@ -431,7 +431,7 @@ global proc shelf_RigHelpers () {
         -image "addController.png"
         -image1 "addController.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "from helpers import addController\naddController.MainUI().show()\n\n\n"
         -sourceType "python"
@@ -464,7 +464,7 @@ global proc shelf_RigHelpers () {
         -image "copySkinWeightsIcon.png"
         -image1 "copySkinWeightsIcon.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "from trigger.utils import skin_transfer\nskin_transfer.skin_transfer()"
         -sourceType "python"
@@ -497,7 +497,7 @@ global proc shelf_RigHelpers () {
         -image "colorizer.png"
         -image1 "colorizer.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "from helpers import colorize\ncolorize.MainUI().show()"
         -sourceType "python"
@@ -530,7 +530,7 @@ global proc shelf_RigHelpers () {
         -image "unlock.png"
         -image1 "unlock.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "from helpers import unlockAndUnhide\nunlockAndUnhide.command()\n"
         -sourceType "python"
@@ -564,7 +564,7 @@ global proc shelf_RigHelpers () {
         -image "upGrp.png"
         -image1 "upGrp.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "from maya import cmds\nfrom trigger.library import functions\n\nselection_list = cmds.ls(sl=True)\nfor sel in selection_list:\n    functions.createUpGrp(sel, \"offset\")"
         -sourceType "python"
@@ -597,7 +597,7 @@ global proc shelf_RigHelpers () {
         -image "mirrorTools.png"
         -image1 "mirrorTools.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "from trigger.utils import makeup\nmakeup.launch()"
         -sourceType "python"
@@ -630,7 +630,7 @@ global proc shelf_RigHelpers () {
         -image "parentToSurface.png"
         -image1 "parentToSurface.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "from maya import cmds\nfrom trigger.utils import parentToSurface\n\nparentToSurface.parentToSurface(mode=\"parentConstraint\")"
         -sourceType "python"
@@ -663,7 +663,7 @@ global proc shelf_RigHelpers () {
         -image "anchorMaker.png"
         -image1 "anchorMaker.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "from trigger.ui import space_switcher_ui\nspace_switcher_ui.launch()"
         -sourceType "python"
@@ -696,7 +696,7 @@ global proc shelf_RigHelpers () {
         -image "cab.png"
         -image1 "cab.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "from tik_rigHelpers import cycleAttributeBuilder\nreload(cycleAttributeBuilder)\ncycleAttributeBuilder.MainUI().show()"
         -sourceType "python"
@@ -729,7 +729,7 @@ global proc shelf_RigHelpers () {
         -image "triggerTools.png"
         -image1 "triggerTools.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "from trigger.utils import trigger_tools\ntrigger_tools.dock_window(trigger_tools.MainUI)"
         -sourceType "python"
@@ -762,7 +762,7 @@ global proc shelf_RigHelpers () {
         -image "objectNoise.png"
         -image1 "objectNoise.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "from tik_utilities import tik_objectNoise\ntik_objectNoise.ObjectNoiseUI().show()"
         -sourceType "python"
@@ -795,7 +795,7 @@ global proc shelf_RigHelpers () {
         -image "blendshape_transfer.png"
         -image1 "blendshape_transfer.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "from trigger.utils import blendshape_transfer\nblendshape_transfer.MainUI().show()"
         -sourceType "python"
@@ -828,44 +828,10 @@ global proc shelf_RigHelpers () {
         -image "seperator_common.png"
         -image1 "seperator_common.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "print(\"User defined macro\");"
         -sourceType "mel"
-        -commandRepeatable 1
-        -flat 1
-    ;
-    shelfButton
-        -enableCommandRepeat 1
-        -flexibleWidthType 3
-        -flexibleWidthValue 32
-        -enable 1
-        -width 35
-        -height 34
-        -manage 1
-        -visible 1
-        -preventOverride 0
-        -annotation "one click locators on selected objects. Double click to make it parent constrained to the source."
-        -enableBackground 0
-        -backgroundColor 0 0 0
-        -highlightColor 0.321569 0.521569 0.65098
-        -align "center"
-        -label "Locate"
-        -labelOffset 0
-        -rotation 0
-        -flipX 0
-        -flipY 0
-        -useAlpha 1
-        -overlayLabelColor 0.8 0.8 0.8
-        -overlayLabelBackColor 0 0 0 0.5
-        -image "locator.png"
-        -image1 "locator.png"
-        -style "iconOnly"
-        -marginWidth 1
-        -marginHeight 1
-        -command "from helpers import locator\nlocator.locate()"
-        -sourceType "python"
-        -doubleClickCommand "from helpers import locator\nlocator.locate(constraint=True)"
         -commandRepeatable 1
         -flat 1
     ;
@@ -895,7 +861,7 @@ global proc shelf_RigHelpers () {
         -image "renamer.png"
         -image1 "renamer.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "from helpers import renamer\nrenamer.MainUI().show()"
         -sourceType "python"
@@ -928,7 +894,7 @@ global proc shelf_RigHelpers () {
         -image "seperator_external.png"
         -image1 "seperator_external.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "print(\"User defined macro\");"
         -sourceType "mel"
@@ -961,7 +927,7 @@ global proc shelf_RigHelpers () {
         -image "extractDeltasDuplicate.png"
         -image1 "extractDeltasDuplicate.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "from maya import cmds\nfrom maya import mel\ncmds.loadPlugin(\"extractDeltas.py\", quiet=True)\nmel.eval(\"extractDeltasDuplicateMesh\")"
         -sourceType "python"
@@ -994,7 +960,7 @@ global proc shelf_RigHelpers () {
         -image "extractDeltas.png"
         -image1 "extractDeltas.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "from maya import cmds\nfrom maya import mel\ncmds.loadPlugin(\"extractDeltas.py\", quiet=True)\nmel.eval(\"performExtractDeltas\")\n"
         -sourceType "python"
@@ -1006,7 +972,7 @@ global proc shelf_RigHelpers () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
+        -width 39
         -height 34
         -manage 1
         -visible 1
@@ -1027,12 +993,45 @@ global proc shelf_RigHelpers () {
         -image "ngSkinToolsShelfIcon.png"
         -image1 "ngSkinToolsShelfIcon.png"
         -style "iconOnly"
-        -marginWidth 1
+        -marginWidth 0
         -marginHeight 1
         -command "from ngSkinTools.ui.mainwindow import MainWindow\nMainWindow.open()"
         -sourceType "python"
         -commandRepeatable 1
         -flat 1
     ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Studio Library"
+        -enableBackground 0
+        -backgroundColor 0 0 0
+        -highlightColor 0.321569 0.521569 0.65098
+        -align "center"
+        -label "import studiolibrary\nstudiolibrary.main()"
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -overlayLabelColor 0.8 0.8 0.8
+        -overlayLabelBackColor 0 0 0 0.5
+        -image "D:/dev/rig-helpers/maya_modules/shelves_module/icons/studiolibrary.png"
+        -image1 "D:/dev/rig-helpers/maya_modules/shelves_module/icons/studiolibrary.png"
+        -style "iconOnly"
+        -marginWidth 0
+        -marginHeight 1
+        -command "import studiolibrary\nstudiolibrary.main()"
+        -sourceType "python"
+        -commandRepeatable 1
+        -flat 1
+    ;
 
-} 
+}
