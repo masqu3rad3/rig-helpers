@@ -845,6 +845,40 @@ global proc shelf_RigHelpers () {
         -manage 1
         -visible 1
         -preventOverride 0
+        -annotation "Put a locator on pivot of selected object. Double click to parent constraint it"
+        -enableBackground 0
+        -backgroundColor 0 0 0
+        -highlightColor 0.321569 0.521569 0.65098
+        -align "center"
+        -label "locate"
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -overlayLabelColor 0.8 0.8 0.8
+        -overlayLabelBackColor 0 0 0 0.5
+        -image "locator.png"
+        -image1 "locator.png"
+        -style "iconOnly"
+        -marginWidth 0
+        -marginHeight 1
+        -command "from helpers.locator import locate\nlocate()"
+        -sourceType "python"
+        -doubleClickCommand "from helpers.locator import locate\nlocate(constraint=True)"
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
         -annotation "Renaming Tools"
         -enableBackground 0
         -backgroundColor 0 0 0
@@ -1015,7 +1049,7 @@ global proc shelf_RigHelpers () {
         -backgroundColor 0 0 0
         -highlightColor 0.321569 0.521569 0.65098
         -align "center"
-        -label "import studiolibrary\nstudiolibrary.main()"
+        -label "studiolibrary"
         -labelOffset 0
         -rotation 0
         -flipX 0
